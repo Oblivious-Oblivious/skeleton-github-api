@@ -1,0 +1,25 @@
+name: skeleton-github-api
+version: 0.1.0
+
+authors:
+  - Thanasis Papapostolou (Oblivious) <me262thanos@gmail.com>
+
+description: |
+  Benchmarking software for comparing Skeleton to Sinatra and Kemal
+
+crystal: 0.36.1
+
+dependencies:
+  skeleton:
+    github: Oblivious-Oblivious/skeleton
+  kemal:
+    github: kemalcr/kemal
+
+executables:
+  - skeleton-github-api
+
+targets:
+  shards:
+    main: src/skeleton-github-api.cr
+
+license: GPLv3
