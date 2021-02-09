@@ -1208,9 +1208,7 @@ app.delete "/user/keys/:id" do |context, params|
     context;
 end
 
-server = Skeleton::Server.new([
-    app
-]);
-
-server.bind_tcp "127.0.0.1", 3000;
-server.listen;
+Skeleton::Server.new
+    .add(app)
+    .bind_tcp("127.0.0.1", 3000)
+    .listen();
