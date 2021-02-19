@@ -30,7 +30,7 @@ make kemal
 
 ```
 gem install sinatra puma
-make ruby
+make sinatra
 ```
 
 ## Benchmarks
@@ -41,11 +41,11 @@ $ wrk -c 100 -d 40 http://localhost:3000/applications/123/tokens/123
 Running 40s test @ http://localhost:3000/applications/123/tokens/123
   2 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency     3.22ms    1.15ms  21.89ms   72.51%
-    Req/Sec    15.67k     2.48k   24.35k    70.00%
-  1247709 requests in 40.00s, 73.77MB read
-Requests/sec:  31189.99
-Transfer/sec:      1.84MB
+    Latency     3.44ms    1.06ms  16.79ms   70.28%
+    Req/Sec    14.61k     2.30k   21.88k    70.75%
+  1163141 requests in 40.00s, 97.61MB read
+Requests/sec:  29076.52
+Transfer/sec:      2.44MB
 ```
 
 *Kemal*
@@ -54,11 +54,11 @@ $ wrk -c 100 -d 40 http://localhost:3000/applications/123/tokens/123
 Running 40s test @ http://localhost:3000/applications/123/tokens/123
   2 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    74.55ms    9.07ms 149.07ms   88.78%
-    Req/Sec   673.35    140.36     1.01k    55.87%
-  53636 requests in 40.03s, 5.52MB read
-Requests/sec:   1340.04
-Transfer/sec:    141.33KB
+    Latency    73.20ms    6.90ms 123.42ms   78.19%
+    Req/Sec   685.33     59.32   808.00     67.88%
+  54625 requests in 40.03s, 5.63MB read
+Requests/sec:   1364.50
+Transfer/sec:    143.91KB
 ```
 
 *Sinatra*
@@ -67,12 +67,11 @@ $ wrk -c 100 -d 40 http://localhost:3000/applications/123/tokens/123
 Running 40s test @ http://localhost:3000/applications/123/tokens/123
   2 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency     7.58ms    9.73ms 105.29ms   90.80%
-    Req/Sec   550.77    231.16     0.96k    60.12%
-  43881 requests in 40.04s, 7.20MB read
-  Socket errors: connect 0, read 0, write 0, timeout 2
-Requests/sec:   1096.00
-Transfer/sec:    184.09KB
+    Latency     7.03ms    8.88ms 219.65ms   90.53%
+    Req/Sec     1.14k   197.67     1.32k    83.50%
+  45488 requests in 40.06s, 7.46MB read
+Requests/sec:   1135.37
+Transfer/sec:    190.71KB
 ```
 
 ## Development
