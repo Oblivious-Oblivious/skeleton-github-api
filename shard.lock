@@ -18,5 +18,5 @@ shards:
 
   skeleton:
     git: https://github.com/Oblivious-Oblivious/skeleton.git
-    version: 0.2.0+git.commit.4ef7e205c5085d7894c6d892a696e69fa5e4e598
+    version: 0.3.0+git.commit.2be903a6cb275a0da5de8eaeb211ab85bb602206
 
